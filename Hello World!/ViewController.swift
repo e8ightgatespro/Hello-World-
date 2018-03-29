@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     @IBAction func showOuput(_ sender: Any) {
         let name = txtName.text
-        let output = "Hello " + name!
+        let output = "Hello " + name! + "!"
         lblOutput.text = output
     }
     
