@@ -18,9 +18,19 @@ class ViewController: UIViewController {
         let output = "Hello " + name!
         lblOutput.text = output
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self,
+                                            action: #selector(self.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
